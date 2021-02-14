@@ -19,6 +19,7 @@ public class PersonController {
     @ResponseBody
     public List<Person> getAllPerson() {
         return personService.getAllPerson();
+
     }
 
     @RequestMapping("/addPerson")
