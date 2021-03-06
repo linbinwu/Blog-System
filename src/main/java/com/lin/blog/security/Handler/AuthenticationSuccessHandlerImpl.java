@@ -13,13 +13,11 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Component
-public class DefaultAuthenticationSuccessHandler implements AuthenticationSuccessHandler {
+public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHandler {
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
-        response.getWriter().write(
-                JsonUtils.objectToJson(Result.success()
-                .codeAndMessage(ResultInfo.SUCCESS))
-        );
+        response.setContentType("application/json;charset=utf-8");
+        response.getWriter().write(JsonUtils.objectToJson(new Result(true, ResultInfo.SUCCESS.getCode(), "登录成功")));
     }
 }

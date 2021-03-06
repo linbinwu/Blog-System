@@ -12,6 +12,12 @@ public class Result {
     public Result() {
     }
 
+    public Result(boolean status, String code, String message) {
+        this.status = status;
+        this.code = code;
+        this.message = message;
+    }
+
     public static Result success() {
         Result result = new Result();
         result.status = true;

@@ -1,5 +1,7 @@
 package com.lin.blog.service;
 
-public interface UserInfoService {
+import com.lin.blog.model.entity.UserInfo;
 
+public interface UserInfoService {
+    UserInfo getUserInfoById(Integer id);
 }
