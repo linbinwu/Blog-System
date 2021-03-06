@@ -1,15 +1,13 @@
-package com.lin.person;
+package com.lin.blog;
 
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
+@MapperScan("com.lin.blog.mapper")
 @SpringBootApplication
-@MapperScan("com.lin.person.mapper")
-public class PersonApplication {
-
+public class BlogApplication {
     public static void main(String[] args) {
-        SpringApplication.run(PersonApplication.class, args);
+        SpringApplication.run(BlogApplication.class, args);
     }
-
 }
