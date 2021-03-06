@@ -20,12 +20,12 @@ public class MyUsernamePasswordAuthenticationFilter extends UsernamePasswordAuth
     @Override
     public Authentication attemptAuthentication(HttpServletRequest request, HttpServletResponse response) throws AuthenticationException {
 
+        //json
         if (request.getContentType().equals(MediaType.APPLICATION_JSON_UTF8_VALUE)
                 || request.getContentType().equals(MediaType.APPLICATION_JSON_VALUE)) {
             if (!request.getMethod().equals("POST")) {
                 throw new AuthenticationServiceException("Authentication method not supported: " + request.getMethod());
             }
-
             Map<String, String> map = new HashMap<>();
             try {
                 map = JsonUtils.jsonToObject(GetRequestJsonUtils.getRequestPostStr(request), Map.class);
