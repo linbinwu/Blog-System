@@ -54,3 +54,21 @@ CREATE TABLE `article_tag`  (
     INDEX `fk_article_tag_1`(`article_id`) USING BTREE,
     INDEX `fk_article_tag_2`(`tag_id`) USING BTREE
 ) ENGINE = INNODB DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `article_tag`;
+CREATE TABLE `article_tag`  (
+     `id` INT(11) NOT NULL AUTO_INCREMENT,
+     `article_id` INT(11) NOT NULL COMMENT '文章id',
+     `tag_id` INT(11) NOT NULL COMMENT '标签id',
+     PRIMARY KEY (`id`) USING BTREE,
+     INDEX `fk_article_tag_1`(`article_id`) USING BTREE,
+     INDEX `fk_article_tag_2`(`tag_id`) USING BTREE
+) ENGINE = INNODB DEFAULT CHARSET = utf8;
+
+DROP TABLE IF EXISTS `category`;
+CREATE TABLE `category`  (
+     `id` INT(11) NOT NULL AUTO_INCREMENT,
+     `category_name` VARCHAR(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '分类名',
+     `create_time` DATETIME DEFAULT NULL COMMENT '创建时间',
+     PRIMARY KEY (`id`) USING BTREE
+) ENGINE = INNODB DEFAULT CHARSET = utf8;

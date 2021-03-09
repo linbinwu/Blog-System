@@ -35,6 +35,6 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         }
         UserInfo userInfo = userInfoService.getUserInfoById(user.getUserInfoId());
         //System.out.println(userInfo);
-        return User.withUsername(JsonUtils.objectToJson(user)).password("{noop}" + user.getPassword()).roles("admin").build();
+        return User.withUsername(JsonUtils.objectToJson(user)).password("{noop}" + user.getPassword()).roles(userInfo.getRole()).build();
     }
 }

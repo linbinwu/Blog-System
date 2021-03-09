@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class TestController {
 
-    @GetMapping("/test")
+    @GetMapping("/admin/test")
     @ResponseBody
     public Result test() {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();

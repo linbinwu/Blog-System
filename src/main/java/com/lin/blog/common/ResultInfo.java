@@ -5,6 +5,7 @@ public enum ResultInfo {
     LOGIN_FAIL("403", "login fail"),
     LOGOUT_SUCCESS("200", "logout success"),
     UNAUTHORIZED("401", "unauthorized, please login"),
+    ILLEGAL("401", "illegal"),
     SUCCESS("200", "success"),
     NOT_FOUNT("404", "not found"),
     GLOBAL_ERROR("101", "global error");
