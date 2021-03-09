@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.lin.blog.mapper.ArticleTagMapper">
+    <select id="getArticleTagList" resultType="com.lin.blog.model.entity.ArticleTag">
+        SELECT * FROM article_tag;
+    </select>
+</mapper>
