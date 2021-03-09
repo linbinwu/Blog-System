@@ -20,6 +20,11 @@ public class UserInfo implements Serializable {
     private Integer id;
 
     /*
+    * 用户角色
+    * */
+    private String role;
+
+    /*
     * 昵称
     * */
     private String nickname;
